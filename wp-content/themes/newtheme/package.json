@@ -1,0 +1,12 @@
+{
+  "name": "newtheme",
+  "scripts": {
+		"start": "wp-scripts start --webpack-src-dir=src --output-path=public",
+		"build": "wp-scripts build --webpack-src-dir=src --output-path=public"
+	},
+  "devDependencies": {
+    "@wordpress/scripts": "^27.9.0",
+    "path": "^0.12.7",
+    "webpack-remove-empty-scripts": "^1.0.4"
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"css/screen.css","mappings":";;;AAAA;EACI;AACJ;AAAI;EACI;EACA;AAER,C","sources":["webpack://newtheme/./src/scss/screen.scss"],"sourcesContent":["body {\r\n    color: aqua;\r\n    img{\r\n        width: 100px ;\r\n        height: 100px ;\r\n    }\r\n}"],"names":[],"sourceRoot":""}

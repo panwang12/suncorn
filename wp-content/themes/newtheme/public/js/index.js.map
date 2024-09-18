@@ -1,0 +1,1 @@
+{"version":3,"file":"js/index.js","mappings":";;;;;AAAAA,KAAK,CAAC,aAAa,CAAC;AACpBC,OAAO,CAACC,GAAG,CAAC,aAAa,CAAC,C","sources":["webpack://newtheme/./src/js/index.js"],"sourcesContent":["alert('hello world')\r\nconsole.log(\"hello world\")"],"names":["alert","console","log"],"sourceRoot":""}

@@ -1,0 +1,1 @@
+{"version":3,"file":"js/main.js","mappings":";;;;;AACAA,OAAO,CAACC,GAAG,CAAC,YAAY,CAAC,C","sources":["webpack://woodemo/./src/js/main.js"],"sourcesContent":["\r\nconsole.log(\"hello main\")"],"names":["console","log"],"sourceRoot":""}
