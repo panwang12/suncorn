@@ -5,5 +5,5 @@ wp-content/plugins/
 # 忽略所有的 node_modules 文件夹
 node_modules/
 **/node_modules/
-# wp-config.php
+wp-config.php
 wp-content/debug.log
