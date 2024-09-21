@@ -14,11 +14,11 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Get list of changed files
-    id: changes
-    run: |
-      git fetch origin main
-      git diff --name-only HEAD^ HEAD > changes.txt
-      cat changes.txt  # 输出变化文件
+      id: changes
+      run: |
+        git fetch origin main
+        git diff --name-only HEAD^ HEAD > changes.txt
+        cat changes.txt
       
     - name: Deploy to server
       if: success()
