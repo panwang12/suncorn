@@ -14,14 +14,14 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Get list of changed files
-    id: changes
-    run: |
-       git fetch origin main 
-      if [ "$(git rev-list --count HEAD)" -gt 1 ]; then
-        git diff --name-only HEAD^ HEAD > changes.txt
-      else
-        git diff --name-only HEAD > changes.txt
-      fi
+      id: changes
+      run: |
+        git fetch origin main 
+        if [ "$(git rev-list --count HEAD)" -gt 1 ]; then
+          git diff --name-only HEAD^ HEAD > changes.txt
+        else
+          git diff --name-only HEAD > changes.txt
+        fi
       
     - name: Deploy to server
       if: success()
