@@ -12,7 +12,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
+    - name: Check current time
+      run: date
+      
     - name: List files to be synchronized
       run: ls -l ./  # 列出当前目录下l所有文件
 
