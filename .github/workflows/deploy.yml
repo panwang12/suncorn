@@ -12,14 +12,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-        lfs: false
-        ref: main
-        # 保留文件的提交时间戳
-        persist-credentials: false
-        set-safe-directory: true
-        restore-time: true # 保留提交的原始时间戳
+
     - name: Check current time
       run: date
 
@@ -30,7 +23,7 @@ jobs:
       uses: easingthemes/ssh-deploy@v2.0.7
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # 在 GitHub secrets 中配置 SSH key
-        ARGS: "-avz  --delete  --exclude-from='.rsync-ignore'  --verbose"
+        ARGS: "-avz  --delete --checksum  --exclude-from='.rsync-ignore'  --verbose"
         SOURCE: "./"
         REMOTE_HOST: "47.116.214.40"  # 替换为你的服务器IP
         REMOTE_USER: "root"  # 替换为你的服务器用户名
