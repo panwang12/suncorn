@@ -12,8 +12,14 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      with: 
-        restore-time: true
+      with:
+        fetch-depth: 0
+        lfs: false
+        ref: main
+        # 保留文件的提交时间戳
+        persist-credentials: false
+        set-safe-directory: true
+        restore-time: true # 保留提交的原始时间戳
     - name: Check current time
       run: date
 
