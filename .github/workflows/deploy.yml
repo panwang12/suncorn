@@ -17,7 +17,7 @@ jobs:
       uses: easingthemes/ssh-deploy@v2.0.7
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # 在 GitHub secrets 中配置 SSH key
-        ARGS: "-avz --delete --exclude-from='.rsync-ignore'"
+        ARGS: "-avz --delete --exclude='wp-config.php' --exclude-from='.rsync-ignore'"
         SOURCE: "./"
         REMOTE_HOST: "47.116.214.40"  # 替换为你的服务器IP
         REMOTE_USER: "root"  # 替换为你的服务器用户名
