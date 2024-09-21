@@ -12,6 +12,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      
+    - name: Adjust timestamps
+      run: find . -exec touch -r {} \;
 
     - name: Check current time
       run: date
