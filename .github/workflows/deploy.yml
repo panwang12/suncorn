@@ -13,11 +13,20 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Get list of changed files
+    id: changes
+    run: |
+      git fetch origin main
+      git diff --name-only HEAD^ HEAD > changes.txt
+      cat changes.txt  # 输出变化文件
+      
     - name: Deploy to server
+      if: success()
       uses: easingthemes/ssh-deploy@v2.0.7
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # 在 GitHub secrets 中配置 SSH key
-        ARGS: "-avz --delete --checksum  --exclude-from='.rsync-ignore'"
+        # ARGS: "-avz --delete --checksum  --exclude-from='.rsync-ignore'"
+        ARGS: "-avz --delete --files-from=changes.txt"  # 仅传输变化文件
         SOURCE: "./"
         REMOTE_HOST: "47.116.214.40"  # 替换为你的服务器IP
         REMOTE_USER: "root"  # 替换为你的服务器用户名
