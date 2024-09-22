@@ -24,7 +24,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # 在 GitHub secrets 中配置 SSH key
         # ARGS: "-avzc -i   --delete --verbose" #
-        ARGS: "-rlgoDzvc -i --delete --exclude-from='.rsync-ignore'"
+        ARGS: "-rlgoDzvc -i --delete --exclude-from='rsyncignore'"
         # SSH_CMD_ARGS: "-o --exclude-from='.rsync-ignore'"
         SOURCE: "./"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }} # 替换为你的--size-onlyIP
