@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@main
+      uses: actions/checkout@v2
 
     - name: Check current time
       run: date
@@ -20,7 +20,7 @@ jobs:
       run: ls -la ./  # 列出当前目录下l所有文件
 
     - name: Deploy to server
-      uses: easingthemes/ssh-deploy@v2.0.7
+      uses: easingthemes/ssh-deploy@main
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # 在 GitHub secrets 中配置 SSH key
         ARGS: "-avz  --delete --checksum --no-owner --no-group --no-perms --verbose"
