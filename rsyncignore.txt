@@ -6,3 +6,7 @@ wp-content/plugins/
 node_modules/
 **/node_modules/
 wp-config.php
+.git
+.github
+.gitignore
+.rsyncignore.txt
