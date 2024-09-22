@@ -1,0 +1,115 @@
+.header-container{
+    background-color: #0D5D9C;
+    color: #fff;
+    .my-basket-bar{
+        text-align: right;
+        a{
+            text-decoration: none;
+            color: #fff;
+            .icon-cart{
+                vertical-align: sub;
+            }
+        }
+    }
+    .header-logo{
+        color: #fff;
+        text-decoration:none;
+    }
+}
+
+.primary-menu-class {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .nav-menu{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color:#407EC9;
+        margin: 0 auto;
+        position: relative;
+        & > li{
+            a{
+                display: inline-block;
+                color: #fff;
+                text-decoration:none;
+                padding: 20px 15px 20px 20px;
+            }
+            .sub-menu{
+                display: none;
+            }
+           
+        }
+        & > li:hover{
+            a{
+                color: #407EC9;;
+                text-decoration:none;
+                background-color:#fff;
+                padding: 20px 15px 20px 20px;
+            }
+            .sub-menu{
+                z-index: 1000;
+                left: 20px;
+                position: absolute;
+                display: grid;
+                color: #407EC9;
+                background-color:#fff;
+                width: calc(100% - 40px);
+                border: 3px solid #e9f7ff;
+                border-top: none;
+                grid-template-columns: repeat(6, 1fr);
+                li{
+                    text-align: center;
+                }
+                
+            }
+           
+        }
+    }
+}
+.breadcrumb-warpper{
+    padding: 20px 0;
+}
+// .primary-menu-class li {
+//     display: inline-block;
+//     position: relative;
+//     margin-right: 20px;
+// }
+
+// .primary-menu-class li a {
+//     text-decoration: none;
+//     color: #333;
+//     padding: 10px 15px;
+//     display: block;
+// }
+
+// .primary-menu-class li:hover > ul {
+//     display: block;
+// }
+
+// .primary-menu-class ul {
+//     display: none;
+//     position: absolute;
+//     top: 100%;
+//     left: 0;
+//     background-color: #fff;
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+// }
+
+// .primary-menu-class ul li {
+//     display: block;
+// }
+
+// .primary-menu-class ul li a {
+//     padding: 10px 15px;
+//     color: #333;
+//     white-space: nowrap;
+// }
+
+// .primary-menu-class ul li a:hover {
+//     background-color: #0073aa;
+//     color: #fff;
+// }

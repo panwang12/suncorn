@@ -1,0 +1,193 @@
+.single-product{
+    
+    img{
+        width: 100%;
+    }
+    .iconfont {
+        font-size: 2.5rem;
+    }
+    .carousel{
+        width: 460px;
+        .carousel-inner{
+            height: 460px;
+            overflow: hidden;
+            background-color: #ddd;
+        }
+    }
+    .product-name{
+        color: #407ec9;
+        font-size: 30px;
+        line-height: 36px;
+        padding: 20px 0;
+        margin: 0;
+        padding: 0;
+        font-family: "VAG Rounded Std Bold", "Tahoma Bold", sans-serif;
+        font-weight: normal;
+        text-align: left;
+    }
+    .carousel-control-prev,.carousel-control-next{
+        background: #407ec9;
+        border-radius: 100px;
+        border: 3px solid #fff;
+        width: 54px;
+        height: 54px;
+        top:50%;
+        transform: translate(0,-50%);
+        opacity:1;
+        &:hover{
+            .icon-arrow-left,.icon-arrow-right {
+                opacity: 0.5;
+            }
+        }
+        &:active{
+            .icon-arrow-left,.icon-arrow-right {
+                opacity:0.7;
+            }
+        }
+    }
+    .carousel-control-prev{
+        left: -20px;
+    }
+    .carousel-control-next{
+        right: -20px;
+    }
+    .thumbnail-content{
+        width: 460px;
+        position: relative;
+
+    
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #407EC9;
+            cursor: pointer;
+            z-index: 1;
+            &:hover{
+                opacity: 0.5;
+            }
+            &:active{
+                    opacity:0.7;
+            }
+        }
+        .icon-arrow-left {
+            left: 0;
+        }
+        .icon-arrow-right {
+            right: 0;
+        }
+        .can-not-click{
+            color: #ddd;
+            &:hover{
+                opacity: 1;
+            }
+            &:active{
+                opacity:1;
+            }
+        }
+    }
+    .thumbnail-wrapper {
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+        width: 360px;
+        
+        .thumbnails{
+            display: flex;
+            margin-left: 0;
+            margin-right: 0;
+            transition: transform 0.3s ease;
+            [data-bs-target]{
+                width: 60px;
+                height: 60px;
+            }
+            img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                cursor: pointer;
+                &.active {
+                    border: 2px solid #ff0;
+                }
+            }
+        }
+    }
+   
+
+    .price-container{
+        margin: 10px 0 20px;
+        text-align: left;
+        .price{
+            color: #ee3224;
+            font-size: 26px;
+            font-family: "VAG Rounded Std Bold", "Tahoma Bold", sans-serif;
+            font-weight: normal;
+        }
+        .regular-price{
+            color: #9B9B9B;
+            // text-decoration: line-through;
+            margin-bottom: 0px;
+            font-size: 26px;
+            margin-left: .5rem;
+        }
+    }
+}
+.product-detail-container{
+    padding: 30px 0;
+    .tab-content{
+        padding: 10px 60px;
+    }
+}
+
+.commentlist{
+    &>.review {
+        margin-bottom:20px;
+    }
+    .comment-body{
+        margin: 10px 0;
+    }
+    .rating {
+        display: inline-block;
+    }
+    
+    .rating .iconfont {
+        color: #ddd; /* 星星的颜色 */
+        font-size: 1.5rem; /* 星星的大小 */
+    }
+    
+    .rating .icon-star.checked {
+        color: #f39c12; /* 已选中的星星颜色 */
+    }
+   
+}
+.comment-form-rating{   
+    .custom-stars-rating{
+        display: inline-block;
+        color: #ddd;
+        cursor: pointer;
+        margin: 0;
+        .star{
+            font-size: 1.5em;
+            &.active,
+            &.hover{
+                color: #f39c12;
+            }
+        }
+        
+    }
+}
+.comment-form-comment{
+    margin-top: 1rem;
+}
+.alert-massage{
+    padding: 0 1rem;
+    color: #ee3224;
+}
+.page-link{
+    border:none;
+}
+.reply{
+    .comment-reply-link,.cancel-reply-link{
+        padding-right: 10px;
+    }
+}

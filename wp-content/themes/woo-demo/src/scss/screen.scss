@@ -1,0 +1,40 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+@import "font/iconfont.css";
+@import "header.scss";
+@import "footer.scss";
+@import "front-page.scss";
+@import "single-product.scss";
+@import "my-account.scss";
+
+body {
+    // img{
+    //     width: 100px ;
+    //     height: 100px ;
+    // }
+    ul{
+        list-style-type: none; 
+        padding: 0;
+        padding-left: 0;
+        margin: 0;
+    }
+    li{
+        padding: 0;
+        margin: 0;
+        list-style-type: none;  
+    }
+}
+h2 {
+    font-family: "Billy Bold", "Tahoma Bold", sans-serif;
+    font-size: 30px;
+    line-height: 32px;
+}
+img {
+    vertical-align: middle;
+}
+.not-found-notice{
+    font-size: 1.5rem;
+    color: #aaa;
+    text-align: center;
+    padding: 2rem;
+}

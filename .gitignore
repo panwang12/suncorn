@@ -1,5 +1,5 @@
 # 忽略所有主题下的 src 文件夹
-wp-content/themes/*/src/
+# wp-content/themes/*/src/
 wp-content/plugins/
 
 # 忽略所有的 node_modules 文件夹
